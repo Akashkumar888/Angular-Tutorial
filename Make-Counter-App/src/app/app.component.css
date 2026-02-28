@@ -1,0 +1,41 @@
+
+
+.container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.incr {
+  background-color:green;
+}
+
+.decr {
+  background-color: red;
+}
+
+.reset {
+  background-color: black;
+}
+
+button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+

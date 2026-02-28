@@ -1,0 +1,34 @@
+<!-- ✅ BEST PRACTICE → Separate Functions (Approach 1)
+Why?
+✅ More readable
+✅ Easier to debug
+✅ Cleaner logic
+✅ Better for scaling
+✅ Interview-friendly
+✅ Industry standard -->
+
+
+
+<div class="container">
+  <h1>Counter App</h1>
+  <h2>{{ counter }}</h2>
+
+  <button (click)="increment()" class="incr">Increment</button>
+  <button (click)="reset()" class="reset">Reset</button>
+  <button (click)="decrement()" class="decr">Decrement</button>
+</div>
+
+
+
+
+ <!-- <div class="container">
+  <h1>Counter App</h1>
+  <h2>{{ counter }}</h2>
+
+  <button (click)="handleCounter('plus')" class="incr">Increment</button>
+  <button (click)="handleCounter('reset')" class="reset">Reset</button>
+  <button (click)="handleCounter('minus')" class="decr">Decrement</button>
+</div>
+
+Outer double quotes
+Inner single quotes -->

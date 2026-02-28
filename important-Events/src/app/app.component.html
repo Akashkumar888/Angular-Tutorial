@@ -1,0 +1,129 @@
+<!-- User Action
+   ↓
+DOM Event
+   ↓
+Angular Event Binding
+   ↓
+Component Method Executes
+   ↓
+State Changes
+   ↓
+Change Detection
+   ↓
+UI Updates -->
+
+
+<!-- 
+🔥 5️⃣ Mouse Events
+
+Angular supports all standard DOM mouse events.
+
+✅ Common Mouse Events
+Event	Meaning
+click	Mouse click
+dblclick	Double click
+mouseenter	Mouse enters element
+mouseleave	Mouse leaves
+mouseover	Mouse moves over
+mouseout	Mouse leaves
+mousedown	Mouse button pressed
+mouseup	Mouse button released
+mousemove	Mouse moves -->
+
+<h1>All Events in Angular</h1>
+
+<!-- CLICK EVENTS -->
+<button (click)="handleEvents($event)" class="btn">
+  Click
+</button>
+
+<button (dblclick)="handleEvents($event)">
+  Double Click
+</button>
+
+<br><br>
+
+<!-- MOUSE EVENTS -->
+<div (mouseenter)="handleEvents($event)" class="box1"></div>
+<div (mouseleave)="handleEvents($event)" class="box2"></div>
+<div (mousemove)="handleEvents($event)" class="box3"></div>
+<div (mousedown)="handleEvents($event)" class="box4"></div>
+<div (mouseup)="handleEvents($event)" class="box5"></div>
+<div (mouseover)="handleEvents($event)" class="box6"></div>
+<div (mouseout)="handleEvents($event)" class="box7"></div>
+<div (contextmenu)="handleEvents($event)" class="box8">
+  Right Click Me
+</div>
+
+<br><br>
+
+<!-- KEYBOARD EVENTS -->
+<input 
+  (keydown)="handleEvents($event)"
+  (keyup)="handleEvents($event)"
+  placeholder="Keyboard events"
+/>
+
+<br><br>
+
+<!-- INPUT EVENTS -->
+<input
+  (focus)="handleEvents($event)"
+  (blur)="handleEvents($event)"
+  (input)="handleEvents($event)"
+  (change)="handleEvents($event)"
+  type="text"
+  placeholder="Input events"
+/>
+
+<br><br>
+
+<!-- COPY / PASTE -->
+<input 
+  (copy)="handleEvents($event)"
+  (paste)="handleEvents($event)"
+  placeholder="Copy & Paste here"
+/>
+
+<br><br>
+
+<!-- FORM SUBMIT -->
+<form (ngSubmit)="handleEvents($event)">
+  <input type="text" name="demo">
+  <button type="submit">Submit</button>
+</form>
+
+<br><br>
+
+<!-- SCROLL EVENT -->
+<div 
+  (scroll)="handleEvents($event)"
+  style="width:200px;height:100px;overflow:auto;border:1px solid black">
+  <div style="height:300px;">Scroll Me</div>
+</div>
+
+<br><br>
+
+<!-- MOUSE WHEEL -->
+<div 
+  (wheel)="handleEvents($event)"
+  style="width:200px;height:100px;border:1px solid black">
+  Use Mouse Wheel
+</div>
+
+<br><br>
+
+<!-- DRAG EVENTS -->
+<div 
+  draggable="true"
+  (dragstart)="handleEvents($event)"
+  (dragend)="handleEvents($event)"
+  style="width:100px;height:100px;background:purple;">
+</div>
+
+<br><br>
+
+<!-- WINDOW RESIZE -->
+<div (window:resize)="handleEvents($event)">
+  Resize window
+</div>

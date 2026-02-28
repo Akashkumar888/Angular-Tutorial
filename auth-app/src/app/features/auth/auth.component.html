@@ -1,0 +1,56 @@
+<div class="auth-container">
+
+  <h2>{{ mode === 'login' ? 'Login' : 'Signup' }}</h2>
+
+  <form (ngSubmit)="onSubmit()">
+
+    <!-- Full Name (Only Signup) -->
+    <div class="form-group" *ngIf="mode === 'signup'">
+      <input 
+        type="text"
+        [(ngModel)]="fullName"
+        name="fullName"
+        placeholder="Full Name"
+        required>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <input 
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Email"
+        required>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <input 
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+        required>
+    </div>
+
+    <button type="submit">
+      {{ mode === 'login' ? 'Login' : 'Signup' }}
+    </button>
+
+  </form>
+
+  <!-- Toggle Section -->
+  <div class="switch-text">
+    <span *ngIf="mode === 'login'">
+      Don’t have an account?
+      <span class="link" (click)="toggleMode()">Sign up</span>
+    </span>
+
+    <span *ngIf="mode === 'signup'">
+      Already have an account?
+      <span class="link" (click)="toggleMode()">Login</span>
+    </span>
+  </div>
+
+</div>
